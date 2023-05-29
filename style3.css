@@ -1,0 +1,477 @@
+/* ====================================================================================================================================================
+=======================================================================================================================================================
+=======================================================================================================================================================
+=======================================================================================================================================================
+=========================================================  F O R      P R O D U C T    M O D A L=======================================================
+=======================================================================================================================================================
+=======================================================================================================================================================
+=======================================================================================================================================================
+======================================================================================================================================================= */
+
+/* Basic Styling */
+html, body {
+    /* height: 100%;
+    width: 100%;
+    margin: 0; */
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .itemsforhide{
+    display: none;
+  }
+  .itemsforhide[input="radio"]{
+    display: none;
+  }
+  .container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    /* border: 10px solid red; */
+  }
+  
+  /* Columns */
+  .left-column {
+    width: 65%;
+    position: relative;
+  }
+  
+  .right-column {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  
+  /* Left Column */
+  .left-column img {
+    width: 100%;
+    max-height: 1000px;
+    position: relative;
+    /* left: -10%; */
+    /* top: 5%;  */
+    display: none;
+    /* margin-top: -53%; */
+    transition: all 0.3s ease;
+  }
+  
+  .left-column img.active {
+    display: block;
+  }
+  
+  /* Right Column */
+  
+  /* Product Description */
+  .product-description {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+  }
+  .product-description span {
+    font-size: 12px;
+    color: #d73535;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .product-description h1 {
+    margin-top: 5%;
+    font-weight: 300;
+    font-size: 32px;
+    color: #43484D;
+    letter-spacing: 0px;
+  }
+  .product-description p {
+    margin-top: 3%;
+    font-size: 16px;
+    font-weight: 300;
+    color: #86939E;
+    line-height: 40px;
+  }
+  .product-description h4{
+    margin-top: 0%;
+    font-size: 16px;
+    font-weight: 300;
+    color: #86939E;
+    line-height: 30px;
+  }
+  
+  /* Product Configuration */
+ 
+    .product-color span,
+    .cable-config span {
+    font-size: 24px;
+    font-weight: 400;
+    color: #86939E;
+    margin-bottom: 0px;
+    display: inline-block;
+  }
+  
+  /* Product Color */
+  .cable-config {
+    margin-bottom: 30px;
+  }
+  
+    .color-choose div {
+    display: inline-block;
+  }
+  
+    .color-choose input[type="radio"] {
+    display: none;
+  }
+  
+    .color-choose input[type="radio"] + label span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 10%;
+  }
+  .modal_price{
+    color: gray;
+    font-size: x-large;
+    margin-left: 20px;
+  }
+  .modal_price .priceValue{
+    color: gray;
+    margin-right: 30px;
+    margin-left: 0px;
+  }
+  
+  .color-choose input[type="radio"]#red + label span {
+    background-color: #C91524;
+  }
+  .color-choose input[type="radio"]#blue + label span {
+    background-color: #314780;
+  }
+  .color-choose input[type="radio"]#black + label span {
+    background-color: #323232;
+  }
+  .color-choose input[type="radio"]#green + label span {
+    background-color: green;
+  }
+  .color-choose input[type="radio"]#purple + label span {
+    background-color: purple;
+  }
+  .color-choose input[type="radio"]#maroon + label span {
+    background-color: maroon;
+  }
+  .color-choose input[type="radio"]#MorningDewWhite + label span {
+    background-color: #c6dbd4;
+  }
+  .color-choose input[type="radio"]#MemorableRose + label span {
+    background-color: #D0898C;
+  }
+  .color-choose input[type="radio"]#yellowishOrange + label span {
+    background-color: #D39403;
+  }
+  .color-choose input[type="radio"]#pink + label span {
+    background-color: pink;
+  }
+  .color-choose input[type="radio"]#lightgreen + label span {
+    background-color: rgb(185, 238, 144);
+  }
+  .color-choose input[type="radio"]#white + label span {
+    background-color: rgb(245, 245, 245);
+  }
+  .color-choose input[type="radio"]#darkblue + label span {
+    background-color: darkblue;
+  }
+  .color-choose input[type="radio"]#skyblue + label span {
+    background-color: skyblue;
+  }
+  .color-choose input[type="radio"]#lightblue + label span {
+    background-color: rgb(210, 236, 247);
+  }
+  .color-choose input[type="radio"]#yellow + label span {
+    background-color: rgba(255, 255, 0, 0.795);
+  }
+  .color-choose input[type="radio"]#coral + label span {
+    background-color: coral;
+  }
+  .color-choose input[type="radio"]#darkyellow + label span {
+    background-color: gold;
+  }
+  .color-choose input[type="radio"]#goldan + label span {
+    background-color: goldenrod;
+  }
+  .color-choose input[type="radio"]#lightpurple + label span {
+    background-color: rgb(217, 164, 217);
+  }
+  .color-choose input[type="radio"]#yellowishgreen + label span {
+    background-color: rgb(223, 227, 100);
+  }
+  .color-choose input[type="radio"]#gray + label span {
+    background-color: gray;
+  }
+  .color-choose input[type="radio"]#cream + label span {
+    background-color: rgb(255, 242, 218);
+  }
+  .color-choose input[type="radio"]#peach + label span {
+    background-color: peachpuff;
+  }
+  .color-choose input[type="radio"]#orange + label span {
+    background-color: orange;
+  }
+  .color-choose input[type="radio"]#brown + label span {
+    background-color: brown;
+  }
+  .color-choose input[type="radio"]#tan + label span {
+    background-color: tan;
+  }
+  .color-choose input[type="radio"]#whitesmoke + label span {
+    background-color: whitesmoke;
+  }
+  /* Cable Configuration */
+  .cable-choose {
+    margin-bottom: 20px;
+  }
+  
+  .size-choose div {
+  display: inline-block;
+}
+
+.size-choose input[type="radio"] {
+  display: none;
+}
+.size-choose input[type="radio"] + label span{
+  display: inline-block;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor:pointer;
+  text-align: center;
+  font-size: 100%;
+  padding-top: 10px;
+  color: black;
+  border-radius: 10%;
+}
+.size-choose input[type="radio"]#xs + label span ,
+.size-choose input[type="radio"]#xxs + label span ,
+.size-choose input[type="radio"]#small + label span ,
+.size-choose input[type="radio"]#medium + label span ,
+.size-choose input[type="radio"]#large + label span ,
+.size-choose input[type="radio"]#xl + label span ,
+.size-choose input[type="radio"]#xxl+ label span,
+.size-choose input[type="radio"]#xxxl+ label span{
+  width: 100px;
+  background-color: #c3c2c293;
+  height: 40px;
+}
+
+.size-choose input[type="radio"]#a26+ label span ,
+.size-choose input[type="radio"]#b28+ label span ,
+.size-choose input[type="radio"]#c30+ label span ,
+.size-choose input[type="radio"]#d32+ label span ,
+.size-choose input[type="radio"]#e34+ label span ,
+.size-choose input[type="radio"]#f36+ label span ,
+.size-choose input[type="radio"]#g38+ label span{
+  width: 100px;
+  height: 40px;
+  background-color: #c3c2c293;
+}
+  /* .cable-config {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 10px;
+  } */
+  
+  /* .cable-config a {
+    color: #358ED7;
+    text-decoration: none;
+    font-size: 12px;
+    position: relative;
+    margin: 10px 0;
+    display: inline-block;
+  }
+  .cable-config a:before {
+    content: "?";
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid rgba(53, 142, 215, 0.5);
+    display: inline-block;
+    text-align: center;
+    line-height: 16px;
+    opacity: 0.5;
+    margin-right: 5px;
+  } */
+  
+  /* Product Price */
+  .product-price {
+    display: flex;
+    /* align-items: center; */
+    /* margin-top: 50%; */
+  }
+  
+  .product-price span {
+    font-size: 26px;
+    font-weight: 300;
+    color: #43474D;
+    margin-right: 20px;
+  }
+   .add-to-cart-btn{
+    background-color: rgb(169, 253, 60);
+    padding: 15px 25px;
+    border-radius: 10px;
+    transition: 1s ;
+    color: gray;
+    width: 100%;
+    
+  }
+  .add-to-cart-btn:hover{
+    background-color: rgb(0, 255, 0);
+    color: white;
+    box-shadow:
+      inset 0 0  0 2px rgb(255,255,255),
+            0.3em 0.3em 1em rgba(0,0,0,0.3);
+  }
+  .modal-size{
+    width: 95%;
+    height: 90px;
+    position: relative;
+    left: 1.5%;
+    /* margin-left: -500px; */
+    /* margin-right: 1%; */
+    /* margin: auto; */
+    /* margin-top: 1%; */
+    top: -1%;
+  }
+  .modal-body{
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    /* overflow: hidden; */
+    margin-bottom: 0%;
+  }
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    /* border-radius: 20px; */
+    height: 90%;
+  }
+  
+  .modal-dialog {
+    display: inline-block;
+    text-align: left;
+    /* border-radius: 20px; */
+    vertical-align: middle;
+  }
+
+  /* @media all and (min-width:767px) { */
+    .modal-size{
+      width: 210%;
+      height: 90px;
+      overflow-y: hidden;
+      position: relative;
+      left: -15%;
+      /* margin-left: -500px; */
+      /* margin-right: 1%; */
+      /* margin: auto; */
+      /* margin-top: 1%; */
+      top: -1%;
+    }
+    .modal-body{
+      /* background-color: #FFFFFF; */
+      border-radius: 20px;
+      margin-bottom: 0%;
+    }
+    
+  
+    
+    .modal-open .modal {
+      overflow-y: hidden;
+    }
+    
+  
+    .modal:before {
+      display: inline-block;
+      vertical-align: middle;
+      content: " ";
+      /* border-radius: 20px; */
+      height: 90%;
+    }
+    
+    .modal-dialog {
+      display: inline-block;
+      text-align: left;
+      /* border-radius: 20px; */
+      vertical-align: middle;
+    }
+  /* } */
+  @media all and (min-width:767px) {
+  .left-column img {
+    width: 100%;
+    margin-left: -10%;
+  }
+  }
+ 
+    .modal-size{
+      width: 95%;
+      height: 90px;
+      overflow-y: hidden;
+      position: relative;
+      left: 1%;
+      /* margin-left: -500px; */
+      /* margin-right: 1%; */
+      /* margin: auto; */
+      /* margin-top: 1%; */
+      top: -1%;
+    }
+    .modal-body{
+      /* background-color: #FFFFFF; */
+      border-radius: 20px;
+      margin-bottom: 0%;
+      padding-left: 50px;
+    }
+    
+  
+    
+    .modal-open .modal {
+      overflow-y: hidden;
+    }
+  
+  
+    .modal:before {
+      display: inline-block;
+      vertical-align: middle;
+      content: " ";
+      /* border-radius: 20px; */
+      height: 90%;
+    }
+    
+    .modal-dialog {
+      display: inline-block;
+      text-align: left;
+      /* border-radius: 20px; */
+      vertical-align: middle;
+    }
+     @media all and (max-width:767px) {
+    .left-column img {
+    margin-left: 75px;
+  }
+  }
+  @media all and (max-width:568px) and (min-width:414px) {
+    .left-column img {
+      width: 200%;
+      height: 650px;
+      /* border: 1px solid red; */
+      /* margin-top: -550px;  */
+      margin-left: auto;
+      margin-right: auto;
+      /* margin-bottom: 100px; */
+    max-width: 150%;
+    height: auto;
+  }
+  }
+  @media all and (max-width:414px) and (min-width:238px) {
+    .left-column img {
+      width: 200%;
+      height: 650px;
+      /* border: 1px solid red; */
+      /* margin-top: -550px;  */
+      margin-left: auto;
+      margin-right: auto;
+      /* margin-bottom: 100px; */
+    max-width: 150%;
+    height: auto;
+  }
+  }

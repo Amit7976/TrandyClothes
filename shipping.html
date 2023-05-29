@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=100">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/img/favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style5.css">
+    <link rel="stylesheet" href="style2.css">
+    <title>Trandy Clothes</title>
+</head>
+
+<body onload="loadfunction()" onkeydown="return (event.keyCode != 116)">
+    <div id="loading"></div>
+
+
+
+
+    <!-- ===================================first nev========================================================c -->
+
+    <nav id="sec_nav" class="d-flex justify-content-between" class="first b" data-aos="fade-up-right"
+        data-aos-offset="100" data-aos-duration="2000" data-aos-once="true">
+        <h1 id="sec_nav_img"><img src="img/img/logo.jpg" alt=""><span>Trandy Clothes </span></h1>
+    </nav>
+
+    <!-- ===================================first nev========================================================c -->
+
+
+
+
+    <!-- ==========================================second nev bar========================================== -->
+
+    <section>
+        <div class="topNevbar">
+            <div class="img_name">
+                <p id="first_nav_logo"><img src="img/img/logo.jpg" alt="" width="35" height="35"
+                        class="d-inline-block align-text-top topNevbar_name"> <small> <i>Trandy Clothes Shop <span
+                                class="shop_city_state"> , Jaipur , Rajasthan </span> </i></small></p>
+            </div>
+            <div class="back_to_shopping">
+                <a href="index.html"><i class="fa fa-chevron-left"></i> &nbsp;Back to shopping</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================second nev bar========================================== -->
+
+
+
+
+    <!-- ===================================progress bar============================================================ -->
+    <section>
+
+        <div>
+            <div class="progressbar">
+                <div class="progress" id="progress"></div>
+
+                <div class="progress-step progress-step-active" data-title="SHIPPING"></div>
+                <div class="progress-step" data-title="PAYMENT"></div>
+                <div class="progress-step" data-title="CONFIRMATION"></div>
+            </div>
+            <!-- <h1 class="shipping_address_heading">Delivery Address</h1> -->
+        </div>
+        <!-- <form action="https://formsubmit.co/3855814ae945663db895886f7b6be5a4" method="POST" class="form needs-validation" novalidate > -->
+
+        <div class="shipping_address__order_summary">
+            <!-- ===================================progress bar============================================================ -->
+
+
+
+
+
+
+            <!-- ==============================================shipping-payment-confermation========================================== -->
+
+
+            <!-- ---------------------------------------------------shipping---------------------------------------- -->
+
+            <div class="shipping_address_area form-step form-step-active" id="loginForm">
+
+                <form onsubmit="sendEmail(); return false;">
+
+                    <div class="shipping_tabs">
+                        <div class="form-floating ">
+                            <input type="text" class="form-control" id="name" placeholder="FULL NAME" required>
+                            <label for="floatingInput">Name</label>
+                            <p><small><i>*enter your full name , what we will call you </i></small></p>
+                        </div>
+                        <div class="form-floating right_shipping_tab">
+                            <input type="email" class="form-control" id="email" placeholder="email" required>
+                            <label for="floatingPassword">Email Id</label>
+                            <p><small><i>*enter your email id for getting all imformation about product delivery and
+                                        important imformation about new products</i></small></p>
+                        </div>
+                    </div>
+
+                    <div class="shipping_tabs">
+                        <div class="form-floating ">
+                            <input type="tel" onkeypress="return onlyNumberKey(event)" class="form-control" id="phone"
+                                placeholder="Contect Number" maxlength="10" minlength="10" required>
+                            <label for="floatingInput">10-digit Mobile Number</label>
+                            <p><small><i>*enter your 10-digit mobile number without country code</i></small></p>
+                        </div>
+
+                        <div class="form-floating right_shipping_tab">
+                            <input type="tel" onkeypress="return onlyNumberKey(event)" class="form-control"
+                                id="alterPhone" placeholder="Alternate Contect Number(Optional)" maxlength="10"
+                                minlength="10">
+                            <label for="floatingPassword">Alternate Phone No.(Optional)</label>
+                            <p><small><i>*enter your 10-digit mobile number without country code</i></small></p>
+                        </div>
+                    </div>
+
+                    <div class="shipping_tabs">
+                        <div class="form-floating address ">
+                            <input type="text" class="form-control" id="Address(AreaandStreet)" placeholder="address"
+                                required>
+                            <label for="floatingInput">Address (Area and Street)</label>
+                            <p><small><i>*enter your home address (area and street)</i></small></p>
+                        </div>
+                        <div class="form-floating right_shipping_tab pincode">
+                            <input type="tel" onkeypress="return onlyNumberKey(event)" class="form-control" id="pincode"
+                                placeholder="pincode" maxlength="6" minlength="6" required>
+                            <label for="floatingPassword">Pincode</label>
+                            <p><small><i>*enter your pincode , must be correct</i></small></p>
+                        </div>
+                    </div>
+
+                    <div class="shipping_tabs">
+                        <div class="form-floating ">
+                            <input type="text" class="form-control" id="Locality" placeholder="Locality" required>
+                            <label for="floatingInput">Locality</label>
+                            <p><small><i>*enter your locality , where you live</i></small></p>
+                        </div>
+                        <div class="form-floating right_shipping_tab">
+                            <input type="text" class="form-control" id="Landmark(Optional)" placeholder="Landmark">
+                            <label for="floatingPassword">Landmark (Optional)</label>
+                            <p><small><i>*enter your landmark , so that we found your home easier</i></small></p>
+                        </div>
+                    </div>
+
+                    <div class="shipping_tabs">
+                        <div class="form-floating ">
+                            <input type="text" class="form-control" id="City/District/Town" placeholder="City" required>
+                            <label for="floatingInput">City/District/Town</label>
+                            <p><small><i>*enter your city , in which you live</i></small></p>
+                        </div>
+                        <div class="form-floating right_shipping_tab ">
+                            <input type="text" class="form-control" id="State" placeholder="State" required>
+                            <label for="floatingInput">State</label>
+                            <p><small><i>*enter your state , in which you live</i></small></p>
+                        </div>
+                    </div><br>
+                    <!-- <div>
+                        <h6>Address Type</h6>
+                        <div class="address_type_radio">
+
+                            <div class="address_type_radios">
+                                <label class=" address_type_radio ">
+                                    <input type="radio" name="address_type" class=" address_type_radio_left "
+                                        required />
+                                    <span class=" text-gray-700">
+                                        Home (All day Delivery)
+                                    </span>
+                                </label>
+                                <label class="inline-flex address_type_radio">
+                                    <input type="radio" name="address_type"
+                                        class="h-5 w-5 address_type_radio_right text-red-600" required />
+                                    <span class=" text-gray-900">
+                                        Work (Delivery between 10AM - 5PM)
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <p><small><i>*enter address type where you receive delivery</i></small></p>
+                    </div> -->
+
+                    <!-- <div class="">
+                        <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+                      </div> -->
+                    <!-- <button type="submit">send</button> -->
+
+
+                    <!-- <div class="login-form">
+                        <div class="form-title">
+                          CONFIRMATION
+                        </div>
+                      
+                        <div class="captcha">
+                          <div class="preview"></div>
+                          <div class="captcha-form">
+                            <input type="text" id="captcha-form" placeholder="Enter captcha text" required>
+                            <p class="captcha-refresh">
+                              <i class="fa fa-refresh"></i>
+                            </p>
+                          </div>
+                        </div>
+                    </div>
+                        -->
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- <div class="flex"> -->
+                    <input type="submit" id="login-btn" onclick="message()" class=" width-50 ml-auto"
+                        value="SAVE AND DELIVERY HERE">
+                    <!-- <input type="reset" id="reset-btn" class="text-gray-400" value="Reset"> -->
+                    <!-- </div> -->
+
+
+                    <!-- <button id="login-btn">SAVE AND DELIVERY HERE</button> -->
+                    <p class="not_share_your_imformation"><small><i class="fa fa-lock"></i> <i> we do not share your
+                                imformation</i></small></p>
+
+                </form>
+            </div>
+
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+            <script>
+
+                // const email = document.getElementById("email").value;
+                function sendEmail() {
+                    Email.send({
+                        SecureToken: "8b0308b5-d5de-4e1f-8b60-4a90f522547e",
+                        // Host : "smtp.elasticemail.com",
+                        // Username : "bittugupta2180946@gmail.com",
+                        // Password : "207E526C536CF1C697B3B4E0C6051C095E90",
+                        To: "bittugupta2180946@gmail.com",
+                        From: "bittugupta2180946@gmail.com",
+                        Subject: "new form",
+
+                        Body:
+                            "<table  width=" + "100%" + ">"
+
+                            + " <tr>" + "<th>USER DETAILS</th>" + "</tr>"+ "<hr width=" + "200%" +">"
+
+                            + "<tr>" + "<td>Name:</td>" + "<td style="+"color:red;"+"> " + document.getElementById("name").value + "</td>"+ "</tr>" + "<hr width=" + "200%" +">" 
+
+                            + "<tr>" + "<td>Email:</td>" + "<td style="+"color:blue;"+" > " + document.getElementById("email").value + "</td>" + "</tr>" + "<hr width=" + "200%" +">"
+
+                            + "<tr>" + "<td>Phone Number:</td>" + "<td style="+"color:red;"+"> " + document.getElementById("phone").value + "</td>" + "</tr>"  + "<hr width=" + "200%" +">"
+
+                            + "<tr>" + "<td>Alternetive Phone Number:</td>" + "<td style="+"color:red;"+"> " + document.getElementById("alterPhone").value + "</td>" + "</tr>" + "<hr width=" + "200%" +">"
+
+                            + "<tr>" + "<td>Address (Area and Street):</td>" + "<td style="+"color:red;"+"> " + document.getElementById("Address(AreaandStreet)").value + "</td>" + "</tr>" + "<hr width=" + "200%" +">"
+
+                            + "<tr>" + "<td>Pincode:</td>" + "<td style="+"color:red;"+"> " + document.getElementById("pincode").value + "</td>" + "</tr>" + "<hr width=" + "200%" +">"
+
+                            + "<tr>" + "<td>Locality:</td>" + "<td style="+"color:red;"+"> " + document.getElementById("Locality").value + "</td>" + "</tr>" + "<hr width=" + "200%" +">"
+
+                            + "<tr>" + "<td>Landmark:</td>" + "<td style="+"color:red;"+">" + document.getElementById("Landmark(Optional)").value + "</td>"+ "</tr>" + "<hr width=" + "200%" +">"
+
+                            + "<tr>" + "<td>City/District/Town:</td>" + "<td style="+"color:red;"+">" + document.getElementById("City/District/Town").value + "</td>" + "</tr>" + "<hr width=" + "200%" +">"
+
+                            + "<tr>" + "<td>State:</td>" + "<td style="+"color:red;"+"> " + document.getElementById("State").value + "</td>" + "</tr>" + "<hr width=" + "200%" +">"
+
+                            + "<tr>" + "<td>Country:</td>" + "<td style="+"color:red;"+"> " + "INDIA" + "</td>" + "</tr>" + "<hr width=" + "200%" +">"
+
+                            + "</table>" + "<br>" + "<br>" +
+
+                            "<table  width=" + "100%" + ">"
+
+                            + " <tr>" + "<th> ORDER SUMMARY </th>" + "</tr>" + "<hr width=" + "200%" +">"
+
+                            + "<tr>" + "<td>Order ID:</td>"  + "<td style="+"color:red;"+"> " + document.querySelector('#od').innerHTML + "</td>" + "</tr>" + "<hr width=" + "200%" +">"
+
+                            + "<tr>" + "<td>Time:</td>"  + "<td style="+"color:red;"+"> " + h + ":" + m + ":" + s + ":" + session + "</td>" + "</tr>" + "<hr width=" + "200%" +">"
+
+                            + "<tr>" + "<td>Date:</td>"  + "<td style="+"color:red;"+"> " + `${D}-${M}-${Y}` + "</td>" + "</tr>" + "<hr width=" + "200%" +">"
+
+                            + "<tr>" + "<td>Discount Code:</td>"  + "<td style="+"color:gray;"+"> " + localStorage.getItem("code") + "</td>" + "</tr>" + "<hr width=" + "200%" +">"
+
+                            + "<tr>" + "<td>Total price:</td>"  + "<td style="+"color:red;"+"> " + `&#8377;${totalPrice}` + "</td>" + "</tr>" + "<hr width=" + "200%" +">"
+
+                            + "<tr>" + "<td>TAX %:</td>"  + "<td style="+"color:red;"+"> " + "12\%" + "</td>" + "</tr>" + "<hr width=" + "200%" +">"
+
+                            + "<tr>" + "<td>TAX Value:</td>"  + "<td style="+"color:red;"+"> " + '&#8377;' + tax + "</td>" + "</tr>" + "<hr width=" + "200%" +">"
+
+                            + "<tr>" + "<td>Shipping:</td>"  + "<td style="+"color:red;"+"> " + '&#8377;' + Shipping + "</td>" + "</tr>" + "<hr width=" + "200%" +">"
+
+                            + "<tr>" + "<td>Shipping (If Code is Aplyed):</td>" + "<td style="+"color:red;"+"> " + '&#8377;' + localStorage.getItem("Shippping") + "</td>" + "</tr>" + "<hr width=" + "200%" +">"
+
+                            + "<tr>" + "<td>Total Payable:</td>"  + "<td style="+"color:red;"+"> " + '&#8377;' + TotalPayable + "</td>" + "</tr>" + "<hr width=" + "200%" +">"
+
+                            + "<tr>" + "<td>Final Payable Amount:</td>"  + "<td style="+"color:#77CF50;"+"> " + '&#8377;' + localStorage.getItem("Total Payable") + "</td>" + "</tr>" + "<hr width=" + "200%" +">"
+
+                            + "</table>" + "<br>" + "<br>" +
+
+                            "<table  width=" + "100%" + ">"
+
+                            + " <tr>" + "<th> ORDER DETAILS </th>" + "</tr>"  + "<br>" + "<br>"
+
+                            + "<tr>" + "<td style="+"color:skyblue;"+">" + pagal + "</td>" + "<hr>" + "<hr>" + "</tr>"
+
+                            + "</table>" + "<br>" + "<br>"
+                        //         "<br><br><br><br><hr> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> USER DETAILS </b>" +"<hr><br><br><br>"
+
+                        //         + "<br><i> Types </i>" + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ "<i>Values </i>" +"<br>"+"<br> "
+
+                        //          + "<br> Name:" + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ document.getElementById("name").value +" <br> <hr>"
+                        //          + "<br> Email:" +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ document.getElementById("email").value + " <br> <hr>"
+                        //          + "<br> Phone Number:" +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ document.getElementById("phone").value + " <br> <hr>"
+                        //          + "<br> Alternetive Phone Number:" +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ document.getElementById("alterPhone").value +" <br> <hr>"
+                        //          + "<br> Address (Area and Street):" +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ document.getElementById("Address(AreaandStreet)").value +" <br> <hr>"
+                        //          + "<br> Pincode:" +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ document.getElementById("pincode").value +" <br> <hr>"
+                        //          + "<br> Locality:" +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ document.getElementById("Locality").value +" <br> <hr>"
+                        //          + "<br> Landmark:" +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ document.getElementById("Landmark(Optional)").value +" <br> <hr>"
+                        //          + "<br> City/District/Town:" +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ document.getElementById("City/District/Town").value +" <br> <hr>"
+                        //          + "<br> State:" +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ document.getElementById("State").value +" <br> <hr>"
+                        //          + "<br> Country:" +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ "INDIA" + "<hr><br><br><br><br><br><br>" 
+
+
+                        //          + "<hr> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> 0RDER SUMMARY </b>" +"<hr><br><br><br>"
+
+
+                        //  + "<br><i> Types </i>" + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ "<i>Values</i>" +"<br>" +"<br>" 
+
+                        //  + "<br> Order Id:" +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+document.querySelector('#od').innerHTML +" <br> <hr>"
+                        //  + "<br> Time:" +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ h + ":" + m + ":" + s + ":" + session +" <br> <hr>"
+                        //  + "<br> Date:" +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ `${D}-${M}-${Y}` +" <br> <hr>"
+                        //  + "<br> Discount Code:" +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ localStorage.getItem("code") +" <br> <hr>"
+                        //  + "<br> Total price:" +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ `&#8377;${totalPrice}` +" <br> <hr>"
+                        //  + "<br> TAX:" +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ "12\%"+" <br> <hr>"
+                        //  + "<br> TAX Value:" +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ tax +" <br> <hr>"
+                        //  + "<br> Shipping:" +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ '&#8377;' + Shipping +" <br> <hr>"
+                        //  + "<br> Shipping (If Code is Aplyed) "+ localStorage.getItem("Shippping") +" <br> <hr>"
+                        //  + "<br> Total Payable:" +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ '&#8377;' + TotalPayable +"<br> <hr>"
+                        //  + "<br> Final Payable Amount:" +""+ '&#8377;' + localStorage.getItem("Total Payable") +"<br> <hr>"
+
+
+
+                        //          + "<hr> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> ORDER DETAILS </b>" +"<hr><br><br><br>"
+
+                        //          + "<br>" +  pagal +"<br><br><br><br><br> <br><br><br><br><br><br><br><br><br> <hr>"
+                    })
+                }
+            </script>
+            <!-- ---------------------------------------------------shipping---------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- ---------------------------------------------------payment---------------------------------------- -->
+
+
+            <div class="payment form-step">
+
+                <div id="net_bank">
+                    <a class="btn  net_banking" data-bs-toggle="collapse" href="#collapseExample2 ,#collapseExample4"
+                        role="button" aria-expanded="true" aria-controls="collapseExample">
+                        NET BANKING
+                    </a>
+                    <div class="collapse" id="collapseExample2">
+                        <div class="net_banking_collapse">
+                            <a class="btn  net_banking_paytm" data-bs-toggle="collapse"
+                                href="#collapseExample4 , #collapseExample3" role="button" aria-expanded="true"
+                                aria-controls="collapseExample">
+                                PAYTM
+                            </a>
+                            <div class="collapse" id="collapseExample4">
+                                <div>
+                                    <p class="collapse_part">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 122.88 38.52" style="enable-background:new 0 0 122.88 38.52"
+                                            xml:space="preserve">
+                                            <style type="text/css">
+                                                .st0 {
+                                                    fill: #20336B;
+                                                }
+
+                                                .st1 {
+                                                    fill: #00BAF2;
+                                                }
+                                            </style>
+                                            <title>Paytm</title>
+                                            <path class="st1"
+                                                d="M122.47,11.36c-1.12-3.19-4.16-5.48-7.72-5.48h-0.08c-2.32,0-4.41,0.97-5.9,2.52 c-1.49-1.55-3.58-2.52-5.9-2.52h-0.07c-2.04,0-3.91,0.75-5.34,1.98V7.24c-0.05-0.63-0.56-1.12-1.2-1.12h-5.48 c-0.67,0-1.21,0.54-1.21,1.21v29.74c0,0.67,0.54,1.21,1.21,1.21h5.48c0.61,0,1.12-0.46,1.19-1.04l0-21.35c0-0.08,0-0.14,0.01-0.21 c0.09-0.95,0.79-1.74,1.89-1.83h1.01c0.46,0.04,0.85,0.2,1.15,0.45c0.48,0.38,0.74,0.96,0.74,1.6l0.02,21.24 c0,0.67,0.54,1.22,1.21,1.22h5.48c0.65,0,1.17-0.51,1.2-1.15l0-21.33c0-0.7,0.32-1.34,0.89-1.71c0.28-0.18,0.62-0.3,1.01-0.34h1.01 c1.19,0.1,1.9,1,1.9,2.05l0.02,21.22c0,0.67,0.54,1.21,1.21,1.21h5.48c0.64,0,1.17-0.5,1.21-1.13V13.91 C122.86,12.6,122.69,11.99,122.47,11.36L122.47,11.36z M85.39,6.2h-3.13V1.12c0-0.01,0-0.01,0-0.02C82.26,0.5,81.77,0,81.15,0 c-0.07,0-0.14,0.01-0.21,0.02c-3.47,0.95-2.78,5.76-9.12,6.17h-0.61c-0.09,0-0.18,0.01-0.27,0.03h-0.01l0.01,0 C70.41,6.35,70,6.83,70,7.41v5.48c0,0.67,0.54,1.21,1.21,1.21h3.3l-0.01,23.22c0,0.66,0.54,1.2,1.2,1.2h5.42 c0.66,0,1.2-0.54,1.2-1.2l0-23.22h3.07c0.66,0,1.21-0.55,1.21-1.21V7.41C86.6,6.74,86.06,6.2,85.39,6.2L85.39,6.2z" />
+                                            <path class="st0"
+                                                d="M65.69,6.2h-5.48C59.55,6.2,59,6.74,59,7.41v11.33c-0.01,0.7-0.58,1.26-1.28,1.26h-2.29 c-0.71,0-1.29-0.57-1.29-1.28L54.12,7.41c0-0.67-0.54-1.21-1.21-1.21h-5.48c-0.67,0-1.21,0.54-1.21,1.21v12.41 c0,4.71,3.36,8.08,8.08,8.08c0,0,3.54,0,3.65,0.02c0.64,0.07,1.13,0.61,1.13,1.27c0,0.65-0.48,1.19-1.12,1.27 c-0.03,0-0.06,0.01-0.09,0.02l-8.01,0.03c-0.67,0-1.21,0.54-1.21,1.21v5.47c0,0.67,0.54,1.21,1.21,1.21h8.95 c4.72,0,8.08-3.36,8.08-8.07V7.41C66.9,6.74,66.36,6.2,65.69,6.2L65.69,6.2z M34.53,6.23h-7.6c-0.67,0-1.22,0.51-1.22,1.13v2.13 c0,0.01,0,0.03,0,0.04c0,0.02,0,0.03,0,0.05v2.92c0,0.66,0.58,1.21,1.29,1.21h7.24c0.57,0.09,1.02,0.51,1.09,1.16v0.71 c-0.06,0.62-0.51,1.07-1.06,1.12h-3.58c-4.77,0-8.16,3.17-8.16,7.61v6.37c0,4.42,2.92,7.56,7.65,7.56h9.93 c1.78,0,3.23-1.35,3.23-3.01V14.45C43.34,9.41,40.74,6.23,34.53,6.23L34.53,6.23z M35.4,29.09v0.86c0,0.07-0.01,0.14-0.02,0.2 c-0.01,0.06-0.03,0.12-0.05,0.18c-0.17,0.48-0.65,0.83-1.22,0.83h-2.28c-0.71,0-1.29-0.54-1.29-1.21v-1.03c0-0.01,0-0.03,0-0.04 l0-2.75v-0.86l0-0.01c0-0.66,0.58-1.2,1.29-1.2h2.28c0.71,0,1.29,0.54,1.29,1.21V29.09L35.4,29.09z M13.16,6.19H1.19 C0.53,6.19,0,6.73,0,7.38v5.37c0,0.01,0,0.02,0,0.03c0,0.03,0,0.05,0,0.07v24.29c0,0.66,0.49,1.2,1.11,1.21h5.58 c0.67,0,1.21-0.54,1.21-1.21l0.02-8.32h5.24c4.38,0,7.44-3.04,7.44-7.45v-7.72C20.6,9.25,17.54,6.19,13.16,6.19L13.16,6.19z M12.68,16.23v3.38c0,0.71-0.57,1.29-1.28,1.29l-3.47,0v-6.77h3.47c0.71,0,1.28,0.57,1.28,1.28V16.23L12.68,16.23z" />
+
+                                        </svg>
+                                    </p>
+                                    <button class="pay">
+                                        PAY NOW
+                                    </button>
+                                </div>
+                            </div>
+
+
+                            <a class="btn net_banking_phonepay" data-bs-toggle="collapse"
+                                href="#collapseExample3 ,#collapseExample4" role="button" aria-expanded="true"
+                                aria-controls="collapseExample">
+                                PHONE PAY
+                            </a>
+                            <div class="collapse" id="collapseExample3">
+                                <div>
+                                    <p class="collapse_part2">
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 122.88 122.88">
+                                            <defs>
+                                                <style>
+                                                    .cls-1 {
+                                                        fill: #5f259f;
+                                                    }
+
+                                                    .cls-2 {
+                                                        fill: #fff;
+                                                    }
+                                                </style>
+                                            </defs>
+                                            <title>Phonepe</title>
+                                            <path class="cls-1"
+                                                d="M75.56,1.66a61.42,61.42,0,1,0,45.66,73.9A61.42,61.42,0,0,0,75.56,1.66Z" />
+                                            <path class="cls-2"
+                                                d="M89.32,45.41A4.54,4.54,0,0,0,84.86,41H76.62L57.75,19.33a7,7,0,0,0-7.21-2.06L44,19.33a1.52,1.52,0,0,0-.69,2.4L63.92,41.29H32.7A1.63,1.63,0,0,0,31,43v3.43a4.54,4.54,0,0,0,4.46,4.46h4.81V67.37c0,12.35,6.52,19.56,17.5,19.56a23.66,23.66,0,0,0,9.61-1.72v11a5.42,5.42,0,0,0,5.49,5.49h4.8a2.22,2.22,0,0,0,2.06-2.06V50.56H87.6a1.63,1.63,0,0,0,1.72-1.72V45.41Zm-22,29.51a16.38,16.38,0,0,1-6.87,1.37c-5.49,0-8.23-2.74-8.23-8.92V50.9h15.1v24Z" />
+                                        </svg>
+                                        </style>
+                                        <g>
+                                            <path class="st1"
+                                                d="M122.47,11.36c-1.12-3.19-4.16-5.48-7.72-5.48h-0.08c-2.32,0-4.41,0.97-5.9,2.52 c-1.49-1.55-3.58-2.52-5.9-2.52h-0.07c-2.04,0-3.91,0.75-5.34,1.98V7.24c-0.05-0.63-0.56-1.12-1.2-1.12h-5.48 c-0.67,0-1.21,0.54-1.21,1.21v29.74c0,0.67,0.54,1.21,1.21,1.21h5.48c0.61,0,1.12-0.46,1.19-1.04l0-21.35c0-0.08,0-0.14,0.01-0.21 c0.09-0.95,0.79-1.74,1.89-1.83h1.01c0.46,0.04,0.85,0.2,1.15,0.45c0.48,0.38,0.74,0.96,0.74,1.6l0.02,21.24 c0,0.67,0.54,1.22,1.21,1.22h5.48c0.65,0,1.17-0.51,1.2-1.15l0-21.33c0-0.7,0.32-1.34,0.89-1.71c0.28-0.18,0.62-0.3,1.01-0.34h1.01 c1.19,0.1,1.9,1,1.9,2.05l0.02,21.22c0,0.67,0.54,1.21,1.21,1.21h5.48c0.64,0,1.17-0.5,1.21-1.13V13.91 C122.86,12.6,122.69,11.99,122.47,11.36L122.47,11.36z M85.39,6.2h-3.13V1.12c0-0.01,0-0.01,0-0.02C82.26,0.5,81.77,0,81.15,0 c-0.07,0-0.14,0.01-0.21,0.02c-3.47,0.95-2.78,5.76-9.12,6.17h-0.61c-0.09,0-0.18,0.01-0.27,0.03h-0.01l0.01,0 C70.41,6.35,70,6.83,70,7.41v5.48c0,0.67,0.54,1.21,1.21,1.21h3.3l-0.01,23.22c0,0.66,0.54,1.2,1.2,1.2h5.42 c0.66,0,1.2-0.54,1.2-1.2l0-23.22h3.07c0.66,0,1.21-0.55,1.21-1.21V7.41C86.6,6.74,86.06,6.2,85.39,6.2L85.39,6.2z" />
+                                            <path class="st0"
+                                                d="M65.69,6.2h-5.48C59.55,6.2,59,6.74,59,7.41v11.33c-0.01,0.7-0.58,1.26-1.28,1.26h-2.29 c-0.71,0-1.29-0.57-1.29-1.28L54.12,7.41c0-0.67-0.54-1.21-1.21-1.21h-5.48c-0.67,0-1.21,0.54-1.21,1.21v12.41 c0,4.71,3.36,8.08,8.08,8.08c0,0,3.54,0,3.65,0.02c0.64,0.07,1.13,0.61,1.13,1.27c0,0.65-0.48,1.19-1.12,1.27 c-0.03,0-0.06,0.01-0.09,0.02l-8.01,0.03c-0.67,0-1.21,0.54-1.21,1.21v5.47c0,0.67,0.54,1.21,1.21,1.21h8.95 c4.72,0,8.08-3.36,8.08-8.07V7.41C66.9,6.74,66.36,6.2,65.69,6.2L65.69,6.2z M34.53,6.23h-7.6c-0.67,0-1.22,0.51-1.22,1.13v2.13 c0,0.01,0,0.03,0,0.04c0,0.02,0,0.03,0,0.05v2.92c0,0.66,0.58,1.21,1.29,1.21h7.24c0.57,0.09,1.02,0.51,1.09,1.16v0.71 c-0.06,0.62-0.51,1.07-1.06,1.12h-3.58c-4.77,0-8.16,3.17-8.16,7.61v6.37c0,4.42,2.92,7.56,7.65,7.56h9.93 c1.78,0,3.23-1.35,3.23-3.01V14.45C43.34,9.41,40.74,6.23,34.53,6.23L34.53,6.23z M35.4,29.09v0.86c0,0.07-0.01,0.14-0.02,0.2 c-0.01,0.06-0.03,0.12-0.05,0.18c-0.17,0.48-0.65,0.83-1.22,0.83h-2.28c-0.71,0-1.29-0.54-1.29-1.21v-1.03c0-0.01,0-0.03,0-0.04 l0-2.75v-0.86l0-0.01c0-0.66,0.58-1.2,1.29-1.2h2.28c0.71,0,1.29,0.54,1.29,1.21V29.09L35.4,29.09z M13.16,6.19H1.19 C0.53,6.19,0,6.73,0,7.38v5.37c0,0.01,0,0.02,0,0.03c0,0.03,0,0.05,0,0.07v24.29c0,0.66,0.49,1.2,1.11,1.21h5.58 c0.67,0,1.21-0.54,1.21-1.21l0.02-8.32h5.24c4.38,0,7.44-3.04,7.44-7.45v-7.72C20.6,9.25,17.54,6.19,13.16,6.19L13.16,6.19z M12.68,16.23v3.38c0,0.71-0.57,1.29-1.28,1.29l-3.47,0v-6.77h3.47c0.71,0,1.28,0.57,1.28,1.28V16.23L12.68,16.23z" />
+                                        </g></svg>
+                                    </p>
+                                    <button class="pay">PAY NOW</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <input type="radio" name="payment" id="net_bank" required>
+<input type="radio" name="payment" id="cash_on" required>
+<input type="radio" name="payment" id="c-d-a" required> -->
+
+
+                <a id="cash_on" class="btn  net_banking" data-bs-toggle="collapse" href="#cash" role="button"
+                    aria-expanded="true" aria-controls="collapseExample">
+                    <i class="fa fa-check collapse" id="cash" aria-hidden="true"></i> Cash On Delivery
+                </a>
+
+
+                <a id="c-d-a" class="btn  net_banking  disabled" data-bs-toggle="collapse" href="#c_d_a" role="button"
+                    aria-expanded="true" aria-controls="collapseExample">
+                    <i class="fa fa-check collapse" id="c_d_a" aria-hidden="true"></i> Credit / Debit / ATM Card
+                </a>
+
+
+                <a class="btn  net_banking  disabled" data-bs-toggle="collapse" href="#emi" role="button"
+                    aria-expanded="true" aria-controls="collapseExample">
+                    <i class="fa fa-check collapse" id="emi" aria-hidden="true"></i> EMI (Easy Installments)
+                </a>
+
+
+                <a class="btn  net_banking disabled" data-bs-toggle="collapse" href="#gift_code" role="button"
+                    aria-expanded="true" aria-controls="collapseExample">
+                    GIFT CARD
+                </a>
+
+
+                <!-- <a href="#" class="btn btn-next">Next</a> -->
+
+                <input type="submit" class="btn btn-next" value="(Cash On Delivery) CONTINUE">
+                <P class="go_back"><a href="#" class="btn btn-prev">Previous</a></p>
+
+                <!-- <div class="btns-group">
+        <a href="#" class="btn btn-prev">Previous</a>
+        <a href="#" class="btn btn-next">Next</a>
+      </div> -->
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+            <!-- ---------------------------------------------------payment---------------------------------------- -->
+
+
+
+
+
+
+
+            <!-- <div class="login-form form-step">
+                <div class="form-title">
+                  CONFIRMATION
+                </div> -->
+            <!-- <div class="form-input">
+                                                                            <label for="username">Username</label>
+                                                                            <input type="text" id="username">
+                                                                            </div> -->
+            <!-- <div class="form-input">
+                                                                            <label for="password">Password</label>
+                                                                            <input type="password" id="password">
+                                                                            </div> -->
+            <!-- <div class="captcha"> -->
+            <!-- <label for="captcha-input">Enter Captcha</label> -->
+            <!-- <div class="preview"></div>
+                  <div class="captcha-form">
+                    <input type="text" id="captcha-form" placeholder="Enter captcha text" required>
+                    <button class="captcha-refresh">
+                      <i class="fa fa-refresh"></i>
+                    </button>
+                  </div>
+                </div>
+                
+                     
+                <div class="form-input">
+        <input type="submit" value="Submit" id="login-btn" class="btn" />
+        <P class="go_back"><a class="btn btn-prev" >Previous</a></p>
+
+        
+         
+
+                </div>-->
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- ==============================================shipping-payment-confermation========================================== -->
+
+
+
+        <!--=====================================================order_summary===================================================== -->
+
+        <div class="order_summary ">
+
+
+
+            <div class="order_id" id="od">
+
+            </div>
+
+            <div class="time_of_order">
+                <h6>Time</h6>
+                <h6 id="time"></h6>
+            </div>
+            <div class="date_of_order">
+                <h6>Date</h6>
+                <h6 id="date"></h6>
+            </div>
+
+            <div class="discount_code mt-3 PRODUCT_DETAILS">
+                <div>
+                    <div class="card-body">
+                        <a class="d-flex justify-content-between" data-toggle="collapse" href="#collapseExample1"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            PRODUCTS DDETAILS
+                            <span><i class="fa fa-chevron-down pt-1"></i></span>
+                        </a>
+                        <div class="collapse" id="collapseExample1">
+                            <h5 id="produtName"></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- discount code part -->
+            <div class="discount_code mt-3 coupon_apply">
+                <div>
+                    <div class="card-body">
+                        <a class="d-flex justify-content-between" data-toggle="collapse" href="#collapseExample"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            Add a Discount code (Optional)
+                            <span><i class="fa fa-chevron-down pt-1"></i></span>
+                        </a>
+                        <div class="collapse" id="collapseExample">
+                            <div class="mt-3">
+                                <input type="text" name="" id="discount_code1" class="coupon_apply_input"
+                                    placeholder="Enter the discount code">
+                                <h5 id="error_trw"> <i> Enter Code Carefully (Use uppercase)</i></h5>
+                            </div>
+                            <button class="btn btn-primary btn-sm mt-3" onclick="discount_code()">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="subtotal_ammount">
+                <h6>Subtotal</h6>
+                <h6 id="total_price"></h6>
+            </div>
+            <div class="tax_ammount">
+                <h6>All Taxs</h6>
+                <h6 id="tax"></h6>
+            </div>
+            <div class="shipping_cost">
+                <h6>Shipping</h6>
+                <h6 id="Shipping"></h6>
+            </div>
+            <div class="total_pay_amount">
+                <h6>Total Payable</h6>
+                <h6 id="TotalPayable"></h6>
+            </div>
+
+        </div>
+        <!--=====================================================-order_summary===================================================== -->
+
+        </div>
+    </section>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- -------------------------------------------------------------------------------------------------------------All Java Script File---------------------------------------------------------------------------------------------------------  -->
+
+
+    <!-- =============================================================Never Back on the page================================================= -->
+    <script type="text/javascript">
+        function preventBack() { window.history.forward(); }
+        setTimeout("preventBack()", 1);
+        window.onunload = function () { null };  
+    </script>
+    <!-- =============================================================Never Back on the page================================================= -->
+
+
+    <!-- Sweeet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- shipping.js -->
+    <script src="shipping.js"></script>
+
+    <!-- bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+    <!-- =============================================================window Reload================================================= -->
+
+    <script>
+        var preloader = document.getElementById('loading');
+
+        function loadfunction(x100) {
+            preloader.style.display = 'none';
+        }
+    </script>
+    <!-- =============================================================window Reload================================================= -->
+
+
+    <!-- --------------------------------------------------------------------------------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- --------------------------------------------------------------------------------------- -->
+
+</body>
+
+</html>
